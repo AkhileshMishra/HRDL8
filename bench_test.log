@@ -1,0 +1,53 @@
+nohup: ignoring input
+12:20:51 system        | redis_cache.1 started (pid=15674)
+12:20:51 system        | redis_queue.1 started (pid=15679)
+12:20:51 redis_cache.1 | 15677:C 14 Sep 2025 12:20:51.282 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+12:20:51 redis_cache.1 | 15677:C 14 Sep 2025 12:20:51.282 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=15677, just started
+12:20:51 redis_cache.1 | 15677:C 14 Sep 2025 12:20:51.282 # Configuration loaded
+12:20:51 redis_cache.1 | 15677:M 14 Sep 2025 12:20:51.283 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+12:20:51 redis_cache.1 | 15677:M 14 Sep 2025 12:20:51.284 * Running mode=standalone, port=13000.
+12:20:51 redis_cache.1 | 15677:M 14 Sep 2025 12:20:51.284 # Server initialized
+12:20:51 redis_cache.1 | 15677:M 14 Sep 2025 12:20:51.284 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+12:20:51 redis_cache.1 | 15677:M 14 Sep 2025 12:20:51.284 * Ready to accept connections
+12:20:51 system        | web.1 started (pid=15680)
+12:20:51 redis_queue.1 | 15682:C 14 Sep 2025 12:20:51.286 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+12:20:51 redis_queue.1 | 15682:C 14 Sep 2025 12:20:51.287 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=15682, just started
+12:20:51 redis_queue.1 | 15682:C 14 Sep 2025 12:20:51.287 # Configuration loaded
+12:20:51 system        | worker.1 started (pid=15692)
+12:20:51 redis_queue.1 | 15682:M 14 Sep 2025 12:20:51.287 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+12:20:51 system        | socketio.1 started (pid=15687)
+12:20:51 redis_queue.1 | 15682:M 14 Sep 2025 12:20:51.288 * Running mode=standalone, port=11000.
+12:20:51 redis_queue.1 | 15682:M 14 Sep 2025 12:20:51.289 # Server initialized
+12:20:51 redis_queue.1 | 15682:M 14 Sep 2025 12:20:51.289 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+12:20:51 redis_queue.1 | 15682:M 14 Sep 2025 12:20:51.289 * Ready to accept connections
+12:20:51 system        | watch.1 started (pid=15689)
+12:20:51 system        | schedule.1 started (pid=15690)
+12:20:51 socketio.1    | Realtime service listening on: ws://0.0.0.0:9000
+12:20:51 watch.1       | 
+12:20:52 web.1         | /home/ubuntu/test-hrms/env/lib/python3.11/site-packages/passlib/utils/__init__.py:854: DeprecationWarning: 'crypt' is deprecated and slated for removal in Python 3.13
+12:20:52 web.1         |   from crypt import crypt as _crypt
+12:20:52 watch.1       | yarn run v1.22.22
+12:20:52 watch.1       | $ node esbuild --watch --live-reload
+12:20:52 web.1         | Address already in use
+12:20:52 web.1         | Port 8000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+12:20:52 system        | web.1 stopped (rc=1)
+12:20:52 system        | sending SIGTERM to redis_cache.1 (pid 15674)
+12:20:52 system        | sending SIGTERM to redis_queue.1 (pid 15679)
+12:20:52 system        | sending SIGTERM to socketio.1 (pid 15687)
+12:20:52 system        | sending SIGTERM to watch.1 (pid 15689)
+12:20:52 system        | sending SIGTERM to schedule.1 (pid 15690)
+12:20:52 system        | sending SIGTERM to worker.1 (pid 15692)
+12:20:52 redis_cache.1 | 15677:signal-handler (1757866852) Received SIGTERM scheduling shutdown...
+12:20:52 system        | worker.1 stopped (rc=-15)
+12:20:52 redis_queue.1 | 15682:signal-handler (1757866852) Received SIGTERM scheduling shutdown...
+12:20:52 system        | schedule.1 stopped (rc=-15)
+12:20:52 system        | socketio.1 stopped (rc=-15)
+12:20:52 system        | watch.1 stopped (rc=-15)
+12:20:52 redis_cache.1 | 15677:M 14 Sep 2025 12:20:52.387 # User requested shutdown...
+12:20:52 redis_cache.1 | 15677:M 14 Sep 2025 12:20:52.387 * Removing the pid file.
+12:20:52 redis_cache.1 | 15677:M 14 Sep 2025 12:20:52.387 # Redis is now ready to exit, bye bye...
+12:20:52 system        | redis_cache.1 stopped (rc=-15)
+12:20:52 redis_queue.1 | 15682:M 14 Sep 2025 12:20:52.392 # User requested shutdown...
+12:20:52 redis_queue.1 | 15682:M 14 Sep 2025 12:20:52.392 * Removing the pid file.
+12:20:52 redis_queue.1 | 15682:M 14 Sep 2025 12:20:52.392 # Redis is now ready to exit, bye bye...
+12:20:52 system        | redis_queue.1 stopped (rc=-15)

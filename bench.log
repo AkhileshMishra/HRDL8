@@ -1,0 +1,27 @@
+nohup: ignoring input
+11:39:08 system        | web.1 started (pid=9438)
+11:39:08 system        | socketio.1 started (pid=9443)
+11:39:08 system        | watch.1 started (pid=9442)
+11:39:08 system        | redis_queue.1 started (pid=9446)
+11:39:08 system        | schedule.1 started (pid=9455)
+11:39:08 redis_queue.1 | 9456:C 14 Sep 2025 11:39:08.916 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+11:39:08 system        | redis_cache.1 started (pid=9440)
+11:39:08 redis_cache.1 | 9454:C 14 Sep 2025 11:39:08.910 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+11:39:08 redis_cache.1 | 9454:C 14 Sep 2025 11:39:08.910 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=9454, just started
+11:39:08 redis_cache.1 | 9454:C 14 Sep 2025 11:39:08.910 # Configuration loaded
+11:39:08 redis_cache.1 | 9454:M 14 Sep 2025 11:39:08.910 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+11:39:08 redis_cache.1 | 9454:M 14 Sep 2025 11:39:08.910 # Could not create server TCP listening socket 127.0.0.1:13000: bind: Address already in use
+11:39:08 system        | redis_cache.1 stopped (rc=1)
+11:39:08 system        | worker.1 started (pid=9451)
+11:39:08 system        | sending SIGTERM to redis_queue.1 (pid 9446)
+11:39:08 system        | sending SIGTERM to web.1 (pid 9438)
+11:39:08 system        | sending SIGTERM to socketio.1 (pid 9443)
+11:39:08 system        | sending SIGTERM to watch.1 (pid 9442)
+11:39:08 system        | sending SIGTERM to schedule.1 (pid 9455)
+11:39:08 system        | sending SIGTERM to worker.1 (pid 9451)
+11:39:08 system        | redis_queue.1 stopped (rc=-15)
+11:39:08 system        | web.1 stopped (rc=-15)
+11:39:08 system        | socketio.1 stopped (rc=-15)
+11:39:08 system        | schedule.1 stopped (rc=-15)
+11:39:08 system        | watch.1 stopped (rc=-15)
+11:39:08 system        | worker.1 stopped (rc=-15)

@@ -1,0 +1,77 @@
+2025-09-14 08:47:00,743 DEBUG cd test-hrms && python3 -m venv env
+2025-09-14 08:47:04,736 DEBUG cd test-hrms && /home/ubuntu/test-hrms/env/bin/python -m pip install --quiet --upgrade pip
+2025-09-14 08:47:06,489 DEBUG cd test-hrms && /home/ubuntu/test-hrms/env/bin/python -m pip install --quiet wheel
+2025-09-14 08:47:07,349 LOG Getting frappe
+2025-09-14 08:47:07,350 DEBUG cd test-hrms/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2025-09-14 08:47:10,857 LOG Installing frappe
+2025-09-14 08:47:10,859 DEBUG cd /home/ubuntu/test-hrms && /home/ubuntu/test-hrms/env/bin/python -m pip install --quiet --upgrade -e /home/ubuntu/test-hrms/apps/frappe 
+2025-09-14 08:47:37,542 DEBUG cd /home/ubuntu/test-hrms/apps/frappe && yarn install --check-files
+2025-09-14 08:47:43,262 DEBUG cd /home/ubuntu/test-hrms && sudo supervisorctl restart frappe:
+2025-09-14 08:47:43,441 WARNING cd /home/ubuntu/test-hrms && sudo supervisorctl restart frappe: executed with exit code 2
+2025-09-14 08:47:43,441 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-09-14 08:47:43,442 DEBUG cd test-hrms && bench build
+2025-09-14 08:47:43,561 INFO /usr/local/bin/bench build
+2025-09-14 08:48:02,347 LOG setting up backups
+2025-09-14 08:48:02,355 LOG backups were set up
+2025-09-14 08:48:02,355 INFO Bench test-hrms initialized
+2025-09-14 08:48:17,372 INFO /usr/local/bin/bench new-site test-site.local --admin-password admin123 --mariadb-root-password 
+2025-09-14 08:48:59,929 INFO /usr/local/bin/bench new-site test-site.local --admin-password admin123 --db-name test_site_db --db-user frappe --db-password frappe123
+2025-09-14 08:49:05,403 INFO /usr/local/bin/bench new-site --help
+2025-09-14 08:49:15,217 INFO /usr/local/bin/bench new-site test-site.local --admin-password admin123 --mariadb-root-password admin123
+2025-09-14 08:49:20,442 INFO /usr/local/bin/bench new-site test-site.local --admin-password admin123 --mariadb-root-password admin123
+2025-09-14 08:49:42,743 INFO /usr/local/bin/bench get-app erpnext --branch version-15
+2025-09-14 08:49:42,940 LOG Getting erpnext
+2025-09-14 08:49:42,940 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2025-09-14 08:49:46,344 LOG Installing erpnext
+2025-09-14 08:49:46,344 DEBUG cd /home/ubuntu/test-hrms && /home/ubuntu/test-hrms/env/bin/python -m pip install --quiet --upgrade -e /home/ubuntu/test-hrms/apps/erpnext 
+2025-09-14 08:49:56,808 DEBUG cd /home/ubuntu/test-hrms/apps/erpnext && yarn install --check-files
+2025-09-14 08:49:57,329 DEBUG bench build --app erpnext
+2025-09-14 08:49:57,446 INFO /usr/local/bin/bench build --app erpnext
+2025-09-14 08:50:00,421 DEBUG cd /home/ubuntu/test-hrms && sudo supervisorctl restart frappe:
+2025-09-14 08:50:00,597 WARNING cd /home/ubuntu/test-hrms && sudo supervisorctl restart frappe: executed with exit code 2
+2025-09-14 08:50:00,597 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-09-14 08:50:05,945 INFO /usr/local/bin/bench get-app hrms
+2025-09-14 08:50:06,124 LOG Getting hrms
+2025-09-14 08:50:06,124 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2025-09-14 08:50:06,835 LOG Installing hrms
+2025-09-14 08:50:06,835 DEBUG cd /home/ubuntu/test-hrms && /home/ubuntu/test-hrms/env/bin/python -m pip install --quiet --upgrade -e /home/ubuntu/test-hrms/apps/hrms 
+2025-09-14 08:50:08,591 DEBUG cd /home/ubuntu/test-hrms/apps/hrms && yarn install --check-files
+2025-09-14 08:50:44,456 DEBUG bench build --app hrms
+2025-09-14 08:50:44,626 INFO /usr/local/bin/bench build --app hrms
+2025-09-14 08:51:12,060 DEBUG cd /home/ubuntu/test-hrms && sudo supervisorctl restart frappe:
+2025-09-14 08:51:12,244 WARNING cd /home/ubuntu/test-hrms && sudo supervisorctl restart frappe: executed with exit code 2
+2025-09-14 08:51:12,244 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2025-09-14 08:51:22,158 INFO /usr/local/bin/bench --site test-site.local install-app erpnext
+2025-09-14 08:52:13,292 INFO /usr/local/bin/bench --site test-site.local install-app hrms
+2025-09-14 08:52:50,634 INFO /usr/local/bin/bench --site test-site.local install-app hrms
+2025-09-14 08:52:56,281 INFO /usr/local/bin/bench --site test-site.local list-apps
+2025-09-14 08:52:56,972 INFO /usr/local/bin/bench start
+2025-09-14 08:53:06,330 INFO /usr/local/bin/bench start
+2025-09-14 08:53:06,540 INFO /usr/local/bin/bench serve --port 8000
+2025-09-14 08:53:06,546 INFO /usr/local/bin/bench schedule
+2025-09-14 08:53:06,553 INFO /usr/local/bin/bench worker
+2025-09-14 08:53:06,611 INFO /usr/local/bin/bench watch
+2025-09-14 08:54:07,298 INFO /usr/local/bin/bench use test-site.local
+2025-09-14 11:39:03,478 INFO /usr/local/bin/bench start
+2025-09-14 11:39:03,715 INFO /usr/local/bin/bench serve --port 8000
+2025-09-14 11:39:03,717 INFO /usr/local/bin/bench watch
+2025-09-14 11:39:03,741 INFO /usr/local/bin/bench schedule
+2025-09-14 11:39:03,817 INFO /usr/local/bin/bench worker
+2025-09-14 11:39:08,823 INFO /usr/local/bin/bench start
+2025-09-14 11:48:02,498 INFO /usr/local/bin/bench build --force
+2025-09-14 12:20:28,557 INFO /usr/local/bin/bench start
+2025-09-14 12:20:36,973 INFO /usr/local/bin/bench start
+2025-09-14 12:20:37,182 INFO /usr/local/bin/bench worker
+2025-09-14 12:20:37,186 INFO /usr/local/bin/bench serve --port 8000
+2025-09-14 12:20:37,222 INFO /usr/local/bin/bench schedule
+2025-09-14 12:20:37,235 INFO /usr/local/bin/bench watch
+2025-09-14 12:20:51,194 INFO /usr/local/bin/bench start
+2025-09-14 12:20:51,408 INFO /usr/local/bin/bench serve --port 8000
+2025-09-14 12:20:51,420 INFO /usr/local/bin/bench schedule
+2025-09-14 12:20:51,446 INFO /usr/local/bin/bench watch
+2025-09-14 12:20:51,545 INFO /usr/local/bin/bench worker
+2025-09-14 12:21:14,546 INFO /usr/local/bin/bench start
+2025-09-14 12:21:14,749 INFO /usr/local/bin/bench watch
+2025-09-14 12:21:14,781 INFO /usr/local/bin/bench schedule
+2025-09-14 12:21:14,832 INFO /usr/local/bin/bench serve --port 8000
+2025-09-14 12:21:14,839 INFO /usr/local/bin/bench worker
