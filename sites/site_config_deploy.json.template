@@ -1,0 +1,13 @@
+{
+ "db_name": "{{SITE_NAME}}_db",
+ "db_password": "{{DB_PASSWORD}}",
+ "db_type": "mariadb",
+ "db_host": "localhost",
+ "db_port": 3306,
+ "auto_update": false,
+ "encryption_key": "{{ENCRYPTION_KEY}}",
+ "user_type_doctype_limit": {
+  "employee_self_service": 40
+ }
+}
+

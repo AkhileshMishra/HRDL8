@@ -1,0 +1,8 @@
+dbfilename redis_queue.rdb
+dir {{BENCH_DIR}}/config/pids
+pidfile {{BENCH_DIR}}/config/pids/redis_queue.pid
+bind 127.0.0.1
+port 11000
+
+aclfile {{BENCH_DIR}}/config/redis_queue.acl
+

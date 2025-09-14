@@ -1,6 +1,6 @@
 {
  "background_workers": 1,
- "default_site": "hrdl8.local",
+ "default_site": "{{DEFAULT_SITE}}",
  "file_watcher_port": 6787,
  "frappe_user": "ubuntu",
  "gunicorn_workers": 9,
